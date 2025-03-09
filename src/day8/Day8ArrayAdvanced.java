@@ -40,13 +40,33 @@ public class Day8ArrayAdvanced {
 
         int[][] ss = new int[3][3];
         for (int i = 0; i < 3; i++) {
+            System.out.print("학생 "+(i + 1)+"수학점수:");
+            ss[i][0] = sc.nextInt();
+            System.out.print("학생 "+(i + 1)+"국어점수:");
+            ss[i][1] = sc.nextInt();
+            System.out.print("학생 "+(i + 1)+"영어점수:");
+            ss[i][2] = sc.nextInt();
+        }
 
-            System.out.println("학생 "+(i + 1)+"수학점수:");
-            System.out.println("학생 "+(i + 1)+"국어점수:");
-            System.out.println("학생 "+(i + 1)+"영어점수:");
-
-
-
+        for(int j = 0;j<3;j++){
+            int sum = 0;
+            for (int k = 0; k < 3; k++) {
+                sum += ss[j][k];
+            }
+            System.out.println("학생"+(j+1)+"총점:"+(sum)+"평균"+(sum / 3.0));
+        }
+        for(int p = 0;p<3;p++){
+            int min = ss[p][0];
+            int max = ss[p][0];
+            for(int i = 0;i<3;i++){
+                if(max<ss[p][i]){
+                    max = ss[p][i];
+                }
+                if(min>=ss[p][i]){
+                    min = ss[p][i];
+                }
+            }
+            System.out.println("학생"+(p+1)+"최고점"+max+",최저점"+min);
 
         }
     }
