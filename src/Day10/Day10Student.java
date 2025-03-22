@@ -6,8 +6,10 @@ public class Day10Student {
     public String name;
     public int age;
 
+    public Day10Student() {
+    }
 
-    public Day10Student(String name,int age) {
+    public Day10Student(String name, int age) {
         this.name = name;
         this.age = age;
     }
